@@ -44,14 +44,16 @@ work_history = [
 app = Flask(__name__)
 
 
-# Show all restaurants
+# DEFAULT ROUTE
 @app.route('/')
 def homePage():
     return render_template('home.html', work_history=work_history)
 
 
 if __name__ == '__main__':
+    # THIS IS USED FOR DEVELOPMENT ONLY, PROD USES GUNICORN
+    import os
     app.secret_key = 'super_secret_key'
-    # app.debug = True
+    app.debug = True
     port = int(os.environ.get('PORT', 8000))
     app.run(host='0.0.0.0', port=port)
