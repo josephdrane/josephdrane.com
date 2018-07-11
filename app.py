@@ -2,6 +2,12 @@ from flask import Flask, render_template, request, redirect, jsonify, url_for, f
 
 work_history = [
     {
+        "jobtitle" : "Network Operations Engineer, Caching Appliance",
+        "company" : "Facebook",
+        "description" : "",
+        "duration" : "July 2018 - Present"
+    },
+    {
         "jobtitle" : "Site Reliability Engineering, Systems Architect",
         "company" : "Alkami Technology",
         "description" : "",
