@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, jsonify, url_for, f
 
 work_history = [
     {
-        "jobtitle" : "Network Operations Engineer, Caching Appliance",
+        "jobtitle" : "Edge & Network Services, Network Engineer",
         "company" : "Facebook",
         "description" : "",
         "duration" : "July 2018 - Present"
@@ -55,6 +55,9 @@ app = Flask(__name__)
 def homePage():
     return render_template('home.html', work_history=work_history)
 
+@app.route('/privacypolicy')
+def privacyPolicy():
+    return render_template('privacypolicy.html')
 
 if __name__ == '__main__':
     # THIS IS USED FOR DEVELOPMENT ONLY, PROD USES GUNICORN
